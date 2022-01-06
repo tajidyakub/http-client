@@ -185,6 +185,16 @@ class HttpClient
         ];
     }
 
+    public function request(): HttpRequest
+    {
+        return $this->request;
+    }
+
+    public function response(): HttpResponse
+    {
+        return $this->response;
+    }
+
     public function initOptions():void
     {
         // ipv4 only
