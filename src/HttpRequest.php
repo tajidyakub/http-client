@@ -53,7 +53,7 @@ class HttpRequest
     {
         $base = rtrim($this->base, '/');
         $path = ltrim($this->path, '/');
-        $url = $base.$path;
+        $url = $base."/".$path;
 
         if ($this->urlParams != '')
         {
