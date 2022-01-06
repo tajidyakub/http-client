@@ -1,0 +1,21 @@
+{
+    "name": "tjd/http-client",
+    "description": "Simple and easy to use HttpClient",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tajid Yakub",
+            "email": "tajid.yakub@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tjd\\Http\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "symfony/var-dumper": "^6.0"
+    }
+}

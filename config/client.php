@@ -1,0 +1,31 @@
+<?php
+
+return [
+    'ipv4_only' => true,
+
+    'options' => [
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HEADER => true,
+        CURLOPT_SSL_VERIFYPEER => false,
+        CURLOPT_AUTOREFERER => true,
+        CURLOPT_ACCEPT_ENCODING => '',
+    ],
+    'content_types' => [
+        'json' => 'application/json',
+        'xml' => 'application/xml',
+        'form' => 'application/x-www-form-urlencoded',
+    ],
+    'default_headers' => [
+        'Accept' => '*/*',
+        'User-Agent' => 'Tjd\Http\HttpClient v-1.0.0 https://github.com/tajidyakub/http-client.git',
+        'Connection' => 'keep-alive',
+    ],
+    'write_output_body_types' => [
+        'text/html',
+        'application/json',
+        'application/xml',
+        'image/svg',
+    ],
+];
