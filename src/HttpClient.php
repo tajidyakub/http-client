@@ -128,6 +128,8 @@ class HttpClient
     {
         $err = true;
         $message = 'OK';
+        $code = 0;
+        $body = "";
 
         $this->request->set('path', $path);
         
@@ -159,6 +161,8 @@ class HttpClient
             
             $this->response->received($requestExec, $this->client, $this->config->get('write_output_body_types'));
             
+            $code = $this->response->get('httpCode');
+            $body = $this->response->get('body');
             $payload = [
                 'code' => $this->response->get('httpCode'),
                 'executionTime' => $this->response->get('meta','executionTime'),
@@ -182,6 +186,8 @@ class HttpClient
 
         return [
             'err' => $err,
+            'code' => $code,
+            'body' => $body,
             'message' => $message,
             'payload' => $payload,
         ];
