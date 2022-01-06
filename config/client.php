@@ -25,7 +25,8 @@ return [
     ],
     'default_headers' => [
         'Accept' => '*/*',
-        'User-Agent' => "Tjd\Http\HttpClient https://github.com/tajidyakub/http-client.git",
+        //'User-Agent' => "Tjd\Http\HttpClient https://github.com/tajidyakub/http-client.git",
+        'User-Agent' => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:95.0) Gecko/20100101 Firefox/95.0",
         'Connection' => 'keep-alive',
     ],
     'write_output_body_types' => [
