@@ -27,17 +27,21 @@ class HttpClient
      */
     public function __construct(
         string $base, 
-        HttpConfig $config,
         string $host)
     {
         $this->client = curl_init();
         $this->request = new HttpRequest($base);
-        $this->config = $config;
+        $this->config = new HttpConfig;
         $this->initOptions();
         $this->initHeaders();
         $this->request->set('host', $host);
         $this->request->set('headers.Host', $host);
         $this->response = new HttpResponse($this->request);
+    }
+
+    public function config()
+    {
+        return $this->config;
     }
 
     /**
@@ -51,11 +55,10 @@ class HttpClient
      */
     public static function init(
         string $base, 
-        HttpConfig $config,
         string $host
     ):self
     {
-        return new self($base, $config, $host);
+        return new self($base, $host);
     }
 
     /**
