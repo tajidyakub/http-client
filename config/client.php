@@ -17,7 +17,7 @@ return [
         // CURLOPT_TCP_FASTOPEN => true,
         // CURLOPT_TCP_KEEPALIVE => 1,	
         // CURLOPT_DNS_SERVERS => '127.0.0.1,1.1.1.1,1.0.0.1',
-        CURLOPT_ACCEPT_ENCODING => ' ',
+        // CURLOPT_ACCEPT_ENCODING => ' ',
     ],
     'content_types' => [
         'json' => 'application/json',
