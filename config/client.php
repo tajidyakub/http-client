@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'version' => '0.0.1',
+
     'ipv4_only' => true,
 
     'options' => [
@@ -19,7 +21,7 @@ return [
     ],
     'default_headers' => [
         'Accept' => '*/*',
-        'User-Agent' => 'Tjd\Http\HttpClient v-1.0.0 https://github.com/tajidyakub/http-client.git',
+        'User-Agent' => "Tjd\Http\HttpClient https://github.com/tajidyakub/http-client.git",
         'Connection' => 'keep-alive',
     ],
     'write_output_body_types' => [
