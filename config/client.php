@@ -14,6 +14,7 @@ return [
         CURLOPT_SSL_VERIFYHOST => 0,
         CURLOPT_AUTOREFERER => true,
         CURLINFO_HEADER_OUT => true,
+        CURLOPT_COOKIEJAR => 'cookie.txt'
         // CURLOPT_TCP_FASTOPEN => true,
         // CURLOPT_TCP_KEEPALIVE => 1,	
         // CURLOPT_DNS_SERVERS => '127.0.0.1,1.1.1.1,1.0.0.1',
