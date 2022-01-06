@@ -12,6 +12,7 @@ return [
         CURLOPT_HEADER => true,
         CURLOPT_SSL_VERIFYPEER => false,
         CURLOPT_AUTOREFERER => true,
+        CURLOPT_TCP_FASTOPEN => true,
         CURLOPT_ACCEPT_ENCODING => '',
     ],
     'content_types' => [
