@@ -124,8 +124,12 @@ class HttpClient
         return $this;
     }
 
-    public function results()
+    public function results(bool $showBody = true)
     {
+        if (!$showBody)
+        {
+            $this->results['body'] = '';
+        }
         return $this->results;
     }
 
@@ -198,7 +202,7 @@ class HttpClient
             'message' => $message,
             'payload' => $payload,
         ];
-        
+
         return $this;
     }
 
