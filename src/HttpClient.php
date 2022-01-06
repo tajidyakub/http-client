@@ -16,6 +16,8 @@ class HttpClient
 
     protected CurlHandle $client;
 
+    protected array $results;
+
     /**
      * HttpClient Object construct.
      * 
@@ -122,6 +124,11 @@ class HttpClient
         return $this;
     }
 
+    public function results()
+    {
+        return $this->results;
+    }
+
     public function exec(
         string $path = '/', 
         array $urlParams = [])
@@ -184,13 +191,15 @@ class HttpClient
         
         curl_close($this->client);
 
-        return [
+        $this->result = [
             'err' => $err,
             'code' => $code,
             'body' => $body,
             'message' => $message,
             'payload' => $payload,
         ];
+        
+        return $this;
     }
 
     public function request(): HttpRequest
