@@ -16,7 +16,7 @@ class HttpClient
 
     protected CurlHandle $client;
 
-    protected array $results;
+    protected array $results = [];
 
     /**
      * HttpClient Object construct.
@@ -130,6 +130,7 @@ class HttpClient
         {
             $this->results['body'] = '';
         }
+
         return $this->results;
     }
 
@@ -195,7 +196,7 @@ class HttpClient
         
         curl_close($this->client);
 
-        $this->result = [
+        $this->results = [
             'err' => $err,
             'code' => $code,
             'body' => $body,
