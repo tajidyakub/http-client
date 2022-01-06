@@ -47,7 +47,7 @@ class HttpClient
      * 
      * @return self HttpClient Object.
      */
-    public static function request(
+    public static function init(
         string $base, 
         HttpConfig $config,
         string $host
