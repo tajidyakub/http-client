@@ -11,6 +11,7 @@ return [
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_HEADER => true,
         CURLOPT_SSL_VERIFYPEER => false,
+        CURLOPT_SSL_VERIFYHOST => 0,
         CURLOPT_AUTOREFERER => true,
         CURLOPT_TCP_FASTOPEN => true,
         CURLOPT_TCP_KEEPALIVE => 1,	
