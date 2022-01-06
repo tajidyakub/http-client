@@ -232,7 +232,7 @@ class HttpClient
         $http_headers = [];
         foreach ($headers as $k => $v)
         {
-            $http_headersp[] = "{$k}: {$v}";
+            $http_headers[] = "{$k}: {$v}";
         }
         $this->setOption(CURLOPT_HTTPHEADER, $http_headers);
     }
