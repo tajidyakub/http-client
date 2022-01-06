@@ -141,6 +141,8 @@ class HttpClient
         $this->request->set('time', time());
         $this->applyHeaders();
 
+        dd(curl_getinfo($this->client));
+
         $payload = [];
         
         try
